@@ -8,4 +8,4 @@ RUN unzip CapstoneCloud-225410076.zip
 RUN mv CapstoneCloud-225410076/* .
 RUN rm -rf CapstoneCloud-225410076 CapstoneCloud-225410076.zip
 EXPOSE 80
-CMD ["/bin/bash"]
+CMD ["nginx", "-g", "daemon off;"]
