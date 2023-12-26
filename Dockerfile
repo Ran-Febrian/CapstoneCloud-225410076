@@ -1,8 +1,8 @@
-FROM ubuntu:22.04
+FROM nginx:latest
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install wget unzip -y
-WORKDIR /usr/share/ubuntu/html
-COPY default.conf /etc/ubuntu/project/
+WORKDIR /usr/share/nginx/html
+COPY default.conf /etc/nginx/project/
 RUN wget https://github.com/Ran-Febrian/CapstoneCloud-225410076./raw/main/CapstoneCloud-2245410076.zip .
 RUN unzip CapstoneCloud-225410076.zip
 RUN mv CapstoneCloud-225410076/* .
